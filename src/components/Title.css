@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+.Title {
+	background: #A9A9A9;
+	color: green;
+	text-align: center;
+	width: 1200px;
+    padding: 30px 40px;
+}
+
+.Title > h1 {
+	color: black;
+
+}
+.Title > div {
+	width: 100px;
+	background:#000000;
+	margin: 0 auto;
+	font-size: 40px;
+	color: #FFFFFF;
+	padding: 5px;
+}
