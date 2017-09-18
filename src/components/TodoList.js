@@ -1,19 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Todo from './Todo'
 
-const TodoList = ({ todos, onTodoClick }) => (
-  <ul>
-[{
-id: 1,
-    text: 'clean room'
-}, {
-id: 2,
-    text: 'wash the dishes'
-}, {
-id: 3,
-    text: 'feed my cat'
-}]
-  </ul>
+const Todo = ({item, onRemoveClick}) => {
+    return (
+        <li>
+            { item.text }
+            <button onClick={ () => onRemoveClick(item.id) }>X</button>
+        </li>
+    );
+}
+
+const TodoList = ({ todos, onTodoClick }) => {
+    const todoList = todos.map(todo => {
+        return <Todo item={ todo } onRemoveClick={ onTodoClick } key={ todo.id } />
+    });
+
+    return (
+        <ul>
+            { todoList }
+        </ul>
+    );
+};
 
 export default TodoList
